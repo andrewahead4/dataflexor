@@ -2,17 +2,17 @@
 /*
 Plugin Name: DataFlexor
 Plugin URI: http://www.ahead4.biz/
-Description: Totally flexible data for WordPress
+Description: DataFlexor is a data management framework to allow easy extension of WordPress content. Requires the Advanced Custom Fields plugin.
 Version: 0.0.1
 Author: Andrew Fielden
 Author URI: http://andrew.ahead4.biz/
 License: GPL2
 */
 
-//security to ensure it is being accessed via wordpress
+//security to ensure it is being accessed via WordPress
 
 if ( ! defined( 'WPINC' ) ) {
-    die;
+	die;
 }
 
 /*
@@ -20,21 +20,22 @@ if ( ! defined( 'WPINC' ) ) {
 | CONSTANTS
 |--------------------------------------------------------------------------
 */
- 
+
 if ( ! defined( 'AH_WN_BASE_FILE' ) )
-    define( 'AH_WN_BASE_FILE', __FILE__ );
+	define( 'AH_WN_BASE_FILE', __FILE__ );
 if ( ! defined( 'AH_WN_BASE_DIR' ) )
-    define( 'AH_WN_BASE_DIR', plugin_dir_path( AH_WN_BASE_FILE ) );
+	define( 'AH_WN_BASE_DIR', plugin_dir_path( AH_WN_BASE_FILE ) );
 if ( ! defined( 'AH_WN_PLUGIN_URL' ) )
-    define( 'AH_WN_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+	define( 'AH_WN_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 if ( ! defined( 'AH_WN_JS_URL' ) )
-    define( 'AH_WN_JS_URL', plugin_dir_url( __FILE__ ) . 'includes/js/' );
+	define( 'AH_WN_JS_URL', plugin_dir_url( __FILE__ ) . 'includes/js/' );
 
 /*
 |--------------------------------------------------------------------------
-| Classes
+| CLASSES
 |--------------------------------------------------------------------------
 */
+
 require_once AH_WN_BASE_DIR . 'classes/manager.php';
 
 require_once AH_WN_BASE_DIR . 'classes/df_setup.php';
@@ -48,17 +49,17 @@ require_once AH_WN_BASE_DIR . 'Tax-meta-class/Tax-meta-class.php';
 
 // initialise dataflexor
 
-add_action('wp','df_init',20);
+add_action( 'wp', 'df_init', 20 );
 
 function df_init(){
 
 	new df_manager();
-	
+
 }
 
 // setup dataflexor componenets
 
-add_action('init','df_setup',20);
+add_action( 'init', 'df_setup', 20 );
 
 function df_setup(){
 
@@ -66,22 +67,22 @@ function df_setup(){
 
 }
 
-add_action( 'plugins_loaded', 'df_check_acf_loaded');
+add_action( 'plugins_loaded', 'df_check_acf_loaded' );
 
 function df_check_acf_loaded(){
-	if( false == class_exists('acf') ){
+
+	if ( false == class_exists('acf') ){
 		add_action( 'admin_notices', 'acf_admin_error_notice' );
 	}
+
 }
 
 //add_action( 'admin_notices', 'acf_admin_error_notice' );
 
 function acf_admin_error_notice() {
-		$class = "update-nag";
-		$message = "DataFlexor needs the Advanced Custom Fields plugin to Run";
-	        echo"<div class=\"$class\"> <p>$message</p></div>"; 
-	}
 
+	$class = "update-nag";
+	$message = "DataFlexor needs the Advanced Custom Fields plugin to Run";
+	echo "<div class=\"$class\"> <p>$message</p></div>";
 
-
-
+}
