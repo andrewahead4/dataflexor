@@ -18,7 +18,7 @@ With a hierarchy structure you can then create many systems from a help desk to 
 
 Please visit [DataFlexor](http://dataflexor.plugin.city/) for more information tips, upgrades and ideas.
 
-=Compatability=
+=Compatibility=
 Requires [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-custom-fields/) Version 4.0 or later.
 
 == Installation ==
