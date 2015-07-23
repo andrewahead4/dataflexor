@@ -2,7 +2,7 @@
 Contributors: thebigA
 Tags: data framework, fields, data, post, custom post, database, advanced custom fields
 Requires at least: 3.5.0
-Tested up to: 4.2.2
+Tested up to: 4.2.3
 Stable tag: 1.0.0
 Plugin URI: http://dataflexor.plugin.city/
 License: GPLv2 or later
@@ -32,12 +32,13 @@ Requires [Advanced Custom Fields](http://wordpress.org/extend/plugins/advanced-c
 FAQ\'s are maintained at (http://dataflexor.plugin.city/faq/) 
 
 == Screenshots ==
-1. The screenshot description corresponds to screenshot-1.(png|jpg|jpeg|gif).
-2. The screenshot description corresponds to screenshot-2.(png|jpg|jpeg|gif).
-3. The screenshot description corresponds to screenshot-3.(png|jpg|jpeg|gif).
+1. Make a set of categories for your custom category type.
+2. Link your Advanced Custom Fields group to the relevant category.
+3. Make new entries.
+4. See the results appear on the front end.
 
 == Changelog ==
-= 0.1 =
+= 1.0 =
 * Initial release.
 
 == Upgrade Notice ==

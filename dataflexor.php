@@ -42,7 +42,7 @@ require_once AH_WN_BASE_DIR . 'classes/df_setup.php';
 
 require_once AH_WN_BASE_DIR . 'classes/df_standard.php';
 
-require_once AH_WN_BASE_DIR . 'classes/df_fields.php';
+//require_once AH_WN_BASE_DIR . 'classes/df_fields.php';
 
 //include the taxonomy meta class file
 require_once AH_WN_BASE_DIR . 'Tax-meta-class/Tax-meta-class.php';
