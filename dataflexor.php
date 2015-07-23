@@ -77,8 +77,6 @@ function df_check_acf_loaded(){
 
 }
 
-//add_action( 'admin_notices', 'acf_admin_error_notice' );
-
 function acf_admin_error_notice() {
 
 	$class = "update-nag";
