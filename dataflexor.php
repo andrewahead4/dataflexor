@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: DataFlexor
-Plugin URI: http://www.ahead4.biz/
+Plugin URI: http://dataflexor.plugin.city/
 Description: DataFlexor is a data management framework to allow easy extension of WordPress content. Requires the Advanced Custom Fields plugin.
-Version: 0.0.1
+Version: 1.0.0
 Author: Andrew Fielden
 Author URI: http://andrew.ahead4.biz/
 License: GPL2
@@ -79,8 +79,8 @@ function df_check_acf_loaded(){
 
 function acf_admin_error_notice() {
 
-	$class = "update-nag";
-	$message = "DataFlexor needs the Advanced Custom Fields plugin to Run";
+	$class = 'update-nag';
+	$message = 'DataFlexor needs the <a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields plugin</a> to run';
 	echo "<div class=\"$class\"> <p>$message</p></div>";
 
 }
