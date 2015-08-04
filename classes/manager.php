@@ -22,6 +22,24 @@ class df_manager{
 		// only use dataflexor where we have a dataflexor category list
 		// the categorys must accord to posttype plus _dftype
 
+		$this->front_end_setup();
+
+		
+	}	
+
+	public function front_end_setup(){
+		// for use in the front end
+		if ( true == is_admin() ){
+			return;
+		}
+
+		// need to handle the bp groups?
+		/*
+		if ( false == ($taxonomy = get_post_type($post->ID)) ){
+
+		}
+		*/
+
 		$taxonomy = get_post_type($post->ID) . '_dftype';
 
 		if ( is_single() && taxonomy_exists($taxonomy) ){
@@ -50,7 +68,8 @@ class df_manager{
 				$data_flexor = new df_standard($post->ID);
 			}
 		}
-	}	
+		
+	}
 
 	public function acf_admin_error_notice() {
 		$class = "update-nag";

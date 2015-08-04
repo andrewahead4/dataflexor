@@ -40,6 +40,9 @@ class df_setup{
 		  //text field
 		  $my_meta->addText('df_custom_class',array('name'=> __('Custom Class Name ','tax-meta'),'desc' => 'Complete if using a dataflexor custom class for display'));
   
+  		  //checkbox field
+		  $my_meta->addCheckbox('df_bp_post_activity',array('name'=> 'Post in activity stream '));
+
   		  /*
 		   * Don't Forget to Close up the meta box decleration
 		   */
